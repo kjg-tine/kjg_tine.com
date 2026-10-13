@@ -1896,8 +1896,8 @@ h1, h2, h3, p {
     --muted: #635e65;
     --line: #e9cfd3;
     --shadow: 0 12px 35px rgba(112, 53, 75, .11);
-    --panel-bg: rgba(255, 253, 251, .91);
-    --sidebar-bg: rgba(255, 245, 241, .94);
+    --panel-bg: rgba(255, 250, 254, 0.52);
+    --sidebar-bg: rgba(255, 247, 252, 0.42);
     --chip-bg: #ffe4ed;
     --chip-ink: #6b2546;
     --rose: #f75590;
