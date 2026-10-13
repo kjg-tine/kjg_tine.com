@@ -299,3 +299,52 @@ html[data-theme="dark"] .nav-link:hover {
         backdrop-filter: none;
     }
 }
+
+
+
+/* STRIX INSTALLATION REMINDER */
+
+.strix-install-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+
+    margin-top: 16px;
+    padding: 15px;
+
+    border: 1px solid #B98AA7;
+    border-radius: 13px;
+
+    background: rgba(255, 236, 245, 0.92);
+    color: #532D46;
+
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.strix-install-note > i {
+    font-size: 23px;
+    flex-shrink: 0;
+}
+
+.strix-install-note strong {
+    font-size: 14px;
+}
+
+.strix-install-note p {
+    color: #532D46;
+    font-size: 13px;
+    margin: 6px 0 0;
+}
+
+/* Dark mode */
+
+html[data-theme="dark"] .strix-install-note {
+    background: rgba(74, 42, 65, 0.92);
+    color: #FFEBF5;
+    border-color: #B889A8;
+}
+
+html[data-theme="dark"] .strix-install-note p {
+    color: #FFE2F0;
+}
