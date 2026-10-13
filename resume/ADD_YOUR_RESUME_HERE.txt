@@ -1,0 +1,1 @@
+Place your resume at resume/Kristine-Joy-Torres-Resume.pdf, then remove data-resume-pending="true" from the résumé link in index.html. Avoid uploading sensitive personal details.
