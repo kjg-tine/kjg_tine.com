@@ -2722,3 +2722,16 @@ html[data-theme="dark"] .nav-link.active::before {
         transition: none;
     }
 }
+
+
+.contact-note {
+    margin-top: 18px;
+    font-size: 14px !important;
+    line-height: 1.7;
+    color: #FFE4ED;
+}
+
+.contact-note i {
+    color: #F75590;
+    margin-right: 6px;
+}
