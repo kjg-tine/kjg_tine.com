@@ -2621,3 +2621,104 @@ html[data-theme="dark"] .hackathon-view:hover {
     color: #FFFFFF;
     text-decoration: underline;
 }
+
+
+/* =========================================
+   PROJECT GALLERY — CLOSE BUTTON
+========================================= */
+
+.gallery-close {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+
+    padding: 0;
+    background: #FFE4ED;
+    color: #123E3D;
+
+    border: 2px solid #F75590;
+    border-radius: 14px;
+
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1;
+
+    cursor: pointer;
+    transition: background-color 0.2s ease,
+                color 0.2s ease;
+}
+
+/* Phosphor X icon */
+.gallery-close i {
+    display: inline-block;
+    color: inherit;
+    font-size: 27px;
+    line-height: 1;
+}
+
+.gallery-close:hover {
+    background: #F75590;
+    color: #FFFFFF;
+}
+
+.gallery-close:focus-visible {
+    outline: 3px solid #F75590;
+    outline-offset: 3px;
+}
+
+/* Dark mode */
+html[data-theme="dark"] .gallery-close {
+    background: #3A2F40;
+    color: #FFE4ED;
+    border-color: #F75590;
+}
+
+html[data-theme="dark"] .gallery-close:hover {
+    background: #F75590;
+    color: #FFFFFF;
+}
+
+/* =========================================
+   ACTIVE NAVIGATION — PINK INDICATOR
+========================================= */
+
+.nav-link {
+    position: relative;
+}
+
+/* Vertical line at left edge */
+.nav-link.active::before {
+    content: "";
+    position: absolute;
+
+    left: 0 !important;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 4px;
+    height: 20px;
+
+    background-color: #F75590 !important;
+    border-radius: 0 4px 4px 0;
+}
+
+/* Dark mode pink indicator */
+html[data-theme="dark"] .nav-link.active::before {
+    background-color: #FF80B0 !important;
+}
+
+/* Active navigation hover */
+.nav-link.active:hover {
+    background: rgba(247, 85, 144, 0.15);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .gallery-close {
+        transition: none;
+    }
+}
