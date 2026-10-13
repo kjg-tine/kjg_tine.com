@@ -210,3 +210,92 @@ html[data-theme="dark"] .page-shell {
     background: #17212b;
   }
 }
+
+
+/* ========================================
+   GLASS EFFECT - LIGHT MODE
+======================================== */
+
+:root {
+    --panel-bg: rgba(255, 250, 254, 0.77);
+    --sidebar-bg: rgba(255, 247, 252, 0.75);
+}
+
+.page-shell {
+    background: rgba(255, 246, 255, 0.10);
+}
+
+.sidebar,
+.mobile-topbar {
+    background: var(--sidebar-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+}
+
+.panel,
+.work-card,
+.tools-panel,
+.theme-bar {
+    background: var(--panel-bg);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-color: rgba(98, 67, 105, 0.23);
+}
+
+/* Navigation */
+
+.nav-link.active {
+    background: rgba(255, 255, 255, 0.88);
+}
+
+.nav-link:hover {
+    background: rgba(255, 219, 235, 0.88);
+}
+
+/* ========================================
+   GLASS EFFECT - DARK MODE
+======================================== */
+
+html[data-theme="dark"] {
+    --panel-bg: rgba(20, 38, 48, 0.80);
+    --sidebar-bg: rgba(16, 35, 45, 0.78);
+}
+
+html[data-theme="dark"] .page-shell {
+    background: rgba(9, 17, 29, 0.14);
+}
+
+html[data-theme="dark"] .sidebar,
+html[data-theme="dark"] .mobile-topbar {
+    background: var(--sidebar-bg);
+}
+
+html[data-theme="dark"] .panel,
+html[data-theme="dark"] .work-card,
+html[data-theme="dark"] .tools-panel,
+html[data-theme="dark"] .theme-bar {
+    background: var(--panel-bg);
+    border-color: rgba(230, 215, 233, 0.25);
+}
+
+html[data-theme="dark"] .nav-link.active {
+    background: rgba(42, 64, 72, 0.92);
+}
+
+html[data-theme="dark"] .nav-link:hover {
+    background: rgba(55, 78, 86, 0.90);
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-transparency: reduce) {
+    .panel,
+    .work-card,
+    .tools-panel,
+    .theme-bar,
+    .sidebar,
+    .mobile-topbar {
+        background: var(--cream);
+        backdrop-filter: none;
+    }
+}
