@@ -2554,3 +2554,70 @@ html[data-theme="dark"] .strix-install-note p {
         left: 0;
     }
 }
+
+
+/* =========================================
+   DARK MODE — TRAINING READABILITY FIX
+========================================= */
+
+/* Training heading and certificate name */
+html[data-theme="dark"] .credentials-panel h3 {
+    color: #FFF1F7;
+    font-weight: 700;
+}
+
+/* TESDA training description */
+html[data-theme="dark"] .credentials-panel > p {
+    color: #E8D5E0;
+    font-size: 13px;
+}
+
+/* Certification Pending badge */
+html[data-theme="dark"] .pending-tag {
+    background: #3C5356;
+    color: #FFFFFF;
+    border: 1px solid #A8C9C3;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* Badge icons */
+html[data-theme="dark"] .pending-tag i {
+    color: #FFE1EC;
+}
+
+/* Certificate icon */
+html[data-theme="dark"] .certificate-visual {
+    background: #FFE8F1;
+    border-color: #F9D6E5;
+}
+
+html[data-theme="dark"] .certificate-visual i {
+    color: #075F5C;
+}
+
+/* Hackathon certificate information */
+html[data-theme="dark"] .hackathon-certificate {
+    background: rgba(48, 74, 78, 0.90);
+    border-color: #789B9C;
+}
+
+html[data-theme="dark"] .hackathon-info strong {
+    color: #FFFFFF;
+}
+
+html[data-theme="dark"] .hackathon-info small {
+    color: #E7DDE3;
+}
+
+/* View Certificate link */
+html[data-theme="dark"] .hackathon-view {
+    color: #FFC5DE;
+    font-weight: 800;
+}
+
+html[data-theme="dark"] .hackathon-view:hover {
+    color: #FFFFFF;
+    text-decoration: underline;
+}
