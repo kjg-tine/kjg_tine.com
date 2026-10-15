@@ -410,3 +410,136 @@ html[data-theme="dark"] .lab-file-icon,html[data-theme="dark"] .lab-summary-icon
 @media (prefers-reduced-motion: reduce) {
  .network-lab-tile, .lab-caret {transition:none;}
 }
+
+/* ========================================
+   FIX LARGE SPACE IN PROJECT CARDS
+======================================== */
+
+.work-card,
+.featured-project,
+.design-project,
+.strix-project {
+    height: auto !important;
+    min-height: unset !important;
+}
+
+.work-card.featured-project {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 12px;
+}
+
+.work-card .project-description,
+.work-card .work-tags,
+.work-card .project-actions,
+.work-card .project-feature-list {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.work-card .project-actions {
+    padding-top: 0 !important;
+}
+
+.work-card .project-feature-list {
+    padding-top: 14px;
+}
+
+.work-card .work-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+/* If your old CSS has auto-push spacing, this neutralizes it */
+.work-card .work-tags,
+.work-card .project-actions,
+.work-card .project-feature-list,
+.work-card .project-description {
+    align-self: stretch;
+}
+
+/* ========================================
+   MORE TRANSPARENT GLASS EFFECT
+======================================== */
+
+:root {
+    --panel-bg: rgba(255, 250, 254, 0.60);
+    --sidebar-bg: rgba(255, 247, 252, 0.50);
+    --nav-active-bg: rgba(255, 255, 255, 0.58);
+    --nav-hover-bg: rgba(255, 219, 235, 0.45);
+}
+
+/* Main page shell */
+.page-shell {
+    background: rgba(255, 246, 255, 0.06);
+}
+
+/* Sidebar / navigation side */
+.sidebar,
+.mobile-topbar {
+    background: var(--sidebar-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-right: 1px solid rgba(110, 78, 112, 0.14);
+}
+
+/* Cards / panels */
+.panel,
+.work-card,
+.tools-panel,
+.theme-bar {
+    background: var(--panel-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(98, 67, 105, 0.16);
+    box-shadow: 0 8px 24px rgba(98, 67, 105, 0.06);
+}
+
+/* Navigation links */
+.nav-link {
+    background: transparent;
+}
+
+.nav-link:hover {
+    background: var(--nav-hover-bg);
+}
+
+.nav-link.active {
+    background: var(--nav-active-bg);
+    box-shadow: 0 4px 14px rgba(0, 61, 52, 0.05);
+}
+
+/* Optional: profile side softer transparency */
+.profile {
+    background: transparent;
+}
+
+/* ========================================
+   DARK MODE TRANSPARENCY
+======================================== */
+
+html[data-theme="dark"] {
+    --panel-bg: rgba(20, 38, 48, 0.62);
+    --sidebar-bg: rgba(16, 35, 45, 0.54);
+    --nav-active-bg: rgba(42, 64, 72, 0.60);
+    --nav-hover-bg: rgba(55, 78, 86, 0.44);
+}
+
+html[data-theme="dark"] .page-shell {
+    background: rgba(9, 17, 29, 0.08);
+}
+
+html[data-theme="dark"] .sidebar,
+html[data-theme="dark"] .mobile-topbar {
+    border-right: 1px solid rgba(233, 221, 236, 0.10);
+}
+
+html[data-theme="dark"] .panel,
+html[data-theme="dark"] .work-card,
+html[data-theme="dark"] .tools-panel,
+html[data-theme="dark"] .theme-bar {
+    border: 1px solid rgba(230, 215, 233, 0.12);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
+}
