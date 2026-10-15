@@ -54,3 +54,16 @@ if (cloudVideo) {
   document.addEventListener('visibilitychange', syncCloudPlayback);
   syncCloudPlayback();
 }
+
+
+// Network Administration lab navigation (native <details> remains usable without JavaScript).
+document.querySelectorAll('[data-lab-open]').forEach(tile => {
+  tile.addEventListener('click', event => {
+    const target = document.getElementById(tile.dataset.labOpen);
+    if (!target) return;
+    event.preventDefault();
+    document.querySelectorAll('.network-lab-detail').forEach(panel => { panel.open = panel === target; });
+    target.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
+    history.replaceState(null, '', '#' + target.id);
+  });
+});
