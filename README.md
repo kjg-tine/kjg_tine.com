@@ -62,6 +62,3 @@ git push origin main
 ```
 
 If GitHub warns about the ~84 MB STRIX APK, the push may still succeed; for long-term maintainability move the APK to a GitHub Release and update its URL in `index.html`.
-
-## October 2026 résumé update
-The downloadable résumé now includes PUPulot (collaborative Figma prototype), CCIS badminton team captain and BSIT class representative leadership, plus CapCut, Canva, Figma, and basic Adobe creative software familiarity. The PDF and editable Word version are in `resume/`. The website résumé button continues to point to the updated PDF.
